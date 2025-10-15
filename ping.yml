@@ -1,6 +1,1 @@
-- hosts: all
-  become: true
-  tasks:
-
-  - name: Ping test
-    ping:
+ansible windows -vvv -i hosts -m win_ping
