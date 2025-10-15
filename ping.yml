@@ -1,1 +1,3 @@
-ansible all -m ansible.builtin.ping
+- hosts: site
+  roles:
+  - ping
