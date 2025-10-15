@@ -1,0 +1,14 @@
+---
+- name: Update Windows machines
+  hosts: NORM
+  tasks:
+    - name: Check for and install Windows updates
+      ansible.windows.win_updates:
+        Reboot: yes # Set to yes to allow automatic reboot if needed
+      register: windows_updates
+      # The following are optional, for example, to install only critical updates
+      # - category_names:
+      #     - Critical Updates
+      # - allow_deferrals: yes
+      # - exclude_kb:
+      #     - KB5000808
